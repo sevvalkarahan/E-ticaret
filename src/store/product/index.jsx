@@ -1,10 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { Products } from '../../data/products'
-import { all } from 'axios'
 
 const initialState = {
     filteredProduct: Products,
-    category: all,
+
 }
 
 export const productSlice = createSlice({
@@ -12,10 +11,7 @@ export const productSlice = createSlice({
     initialState,
     reducers: {
         _filtered: (state, action) => {
-            state.filteredProduct = state.filteredProduct.filter(product => product.category === action.payload)
-        },
-        _setCategory: (state, action) => {
-            state.category = action.payload
+            state.filteredProduct = Products.filter(product => product.category === action.payload)
         }
     },
 })
