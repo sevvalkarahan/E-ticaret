@@ -6,6 +6,7 @@ export const Products = [
         description: "13.Nesil Core i5 1334U-8Gb-512Gb Ssd-16inc-W11",
         price: "17999",
         sale: "",
+        type: "technology",
         category: "bilgisayar"
     },
     {
@@ -15,6 +16,7 @@ export const Products = [
         description: "128 Gb Siyah",
         price: "35999",
         sale: "10",
+        type: "technology",
         category: "telefon"
     },
     {
@@ -24,6 +26,7 @@ export const Products = [
         description: '50PUS8500 4K UHD QLED 126cm 50" Smart TV Dolby Atmos Titan OS',
         price: "25799",
         sale: "",
+        type: "technology",
         category: "televizyon"
     },
     {
@@ -33,6 +36,7 @@ export const Products = [
         description: "Viskoz karışımlı iplikten üretilmiş, %31 keten içerikli, orta bel pantolon. Önü pens detaylı. Çok geniş paçalı. Dikişte gizli fermuar kapamalı.",
         price: "3990",
         sale: "",
+        type: "clothing",
         category: "pantolon"
     },
     {
@@ -42,6 +46,7 @@ export const Products = [
         description: "Pamuk karışımlı iplikten üretilmiş t-shirt. Kayık yaka ve kolsuz.",
         price: "590",
         sale: "",
+        type: "clothing",
         category: "t-shirt"
     },
     {
@@ -51,6 +56,7 @@ export const Products = [
         description: "PINK FLAMBÉ EDT 30ML",
         price: "490",
         sale: "",
+        type: "cosmetic",
         category: "parfüm"
     }
 ]
