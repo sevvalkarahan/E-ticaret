@@ -7,7 +7,8 @@ export const Products = [
         price: "17999",
         sale: "",
         type: "technology",
-        category: "bilgisayar"
+        category: "bilgisayar",
+        brand: "acer"
     },
     {
         id: 2,
@@ -17,7 +18,8 @@ export const Products = [
         price: "35999",
         sale: "10",
         type: "technology",
-        category: "telefon"
+        category: "telefon",
+        brand: "apple"
     },
     {
         id: 3,
@@ -27,7 +29,8 @@ export const Products = [
         price: "25799",
         sale: "",
         type: "technology",
-        category: "televizyon"
+        category: "televizyon",
+        brand: "philips"
     },
     {
         id: 4,
@@ -37,7 +40,8 @@ export const Products = [
         price: "3990",
         sale: "",
         type: "clothing",
-        category: "pantolon"
+        category: "pantolon",
+        brand: "zara"
     },
     {
         id: 5,
@@ -47,7 +51,8 @@ export const Products = [
         price: "590",
         sale: "",
         type: "clothing",
-        category: "t-shirt"
+        category: "t-shirt",
+        brand: "zara"
     },
     {
         id: 6,
@@ -57,6 +62,7 @@ export const Products = [
         price: "490",
         sale: "",
         type: "cosmetic",
-        category: "parfüm"
+        category: "parfüm",
+        brand: "zara"
     }
 ]

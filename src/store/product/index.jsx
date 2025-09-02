@@ -11,7 +11,7 @@ export const productSlice = createSlice({
     initialState,
     reducers: {
         _filtered: (state, action) => {
-            state.filteredProduct = Products.filter(product => product.category === action.payload)
+            state.filteredProduct = Products.filter(product => product.type === action.payload)
         }
     },
 })

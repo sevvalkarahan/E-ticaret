@@ -6,7 +6,7 @@ import Header from "../../components/header";
 export default function MainLayout() {
     return (
         <div className="w-full h-screen flex flex-col">
-            <div className="">
+            <div className="sticky top-0 z-10">
                 <Header />
             </div>
             <div className="w-full h-screen flex justify-between">

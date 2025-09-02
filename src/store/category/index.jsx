@@ -5,10 +5,10 @@ const initialState = {
 }
 
 export const categorySlice = createSlice({
-    name: 'categoty',
+    name: 'category',
     initialState,
     reducers: {
-        setACtiveCategory: (state, action) => {
+        setActiveCategory: (state, action) => {
             state.activeCategory = action.payload
         }
     }
