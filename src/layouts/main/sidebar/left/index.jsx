@@ -21,7 +21,9 @@ export default function Filter() {
         isCategorySelected, 
         isPriceRangeSelected,
         clearAll,
-        hasActiveFilters
+        hasActiveFilters,
+        sortType,
+        setSort
     } = useFilters();
 
     const renderSubcategories = () => {
@@ -363,8 +365,22 @@ export default function Filter() {
             )}
             <div className="px-2 py-4 flex flex-col gap-y-4">
                 <h1 className="font-bold text-xl flex items-center p-0 gap-2"><LuArrowUpDown className="text-blue-violet" />Sırala</h1>
-                <button type="number" className="px-3 text-gray-700 w-[130px] h-[30px] cursor-pointer">Artan fiyat</button>
-                <button type="number" className="px-3 text-gray-700 w-[130px] h-[30px] cursor-pointer">Azalan fiyat</button>
+                <button 
+                    onClick={() => setSort('asc')}
+                    className={`px-3 text-gray-700 w-[130px] h-[30px] cursor-pointer border rounded transition-colors ${
+                        sortType === 'asc' ? 'bg-blue-violet text-white' : 'hover:bg-gray-100'
+                    }`}
+                >
+                    Artan fiyat
+                </button>
+                <button 
+                    onClick={() => setSort('desc')}
+                    className={`px-3 text-gray-700 w-[130px] h-[30px] cursor-pointer border rounded transition-colors ${
+                        sortType === 'desc' ? 'bg-blue-violet text-white' : 'hover:bg-gray-100'
+                    }`}
+                >
+                    Azalan fiyat
+                </button>
             </div>
         </div>
     )

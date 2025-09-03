@@ -96,3 +96,22 @@ export const getBrandsByType = (products, type) => {
 export const getCategoriesByType = (products, type) => {
     return getUniqueCategories(products.filter(product => product.type === type))
 }
+
+/**
+ * Sort products by price
+ * @param {Array} products - Array of products to sort
+ * @param {string} sortType - 'asc' for ascending, 'desc' for descending
+ * @returns {Array} Sorted products
+ */
+export const sortProductsByPrice = (products, sortType = 'asc') => {
+    return [...products].sort((a, b) => {
+        const priceA = parseInt(a.price)
+        const priceB = parseInt(b.price)
+        
+        if (sortType === 'asc') {
+            return priceA - priceB
+        } else {
+            return priceB - priceA
+        }
+    })
+}

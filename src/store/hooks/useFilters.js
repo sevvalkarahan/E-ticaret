@@ -12,12 +12,14 @@ import {
     removePriceRangeFilter,
     togglePriceRangeFilter,
     clearPriceRangeFilters,
-    clearAllFilters
+    clearAllFilters,
+    toggleSortType,
+    setSortType
 } from '../filters'
 
 export const useFilters = () => {
     const dispatch = useDispatch()
-    const { selectedBrands, selectedCategories, selectedPriceRanges } = useSelector((state) => state.filters)
+    const { selectedBrands, selectedCategories, selectedPriceRanges, sortType } = useSelector((state) => state.filters)
 
     // Brand filter methods
     const addBrand = (brand) => dispatch(addBrandFilter(brand))
@@ -37,6 +39,10 @@ export const useFilters = () => {
     const togglePriceRange = (range) => dispatch(togglePriceRangeFilter(range))
     const clearPriceRanges = () => dispatch(clearPriceRangeFilters())
 
+    // Sort methods
+    const toggleSort = () => dispatch(toggleSortType())
+    const setSort = (type) => dispatch(setSortType(type))
+
     // Utility methods
     const clearAll = () => dispatch(clearAllFilters())
     
@@ -53,6 +59,7 @@ export const useFilters = () => {
         selectedBrands,
         selectedCategories,
         selectedPriceRanges,
+        sortType,
         
         // Brand methods
         addBrand,
@@ -74,6 +81,10 @@ export const useFilters = () => {
         togglePriceRange,
         clearPriceRanges,
         isPriceRangeSelected,
+        
+        // Sort methods
+        toggleSort,
+        setSort,
         
         // Utility methods
         clearAll,

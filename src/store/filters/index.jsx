@@ -3,7 +3,8 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
     selectedBrands: [],
     selectedCategories: [],
-    selectedPriceRanges: []
+    selectedPriceRanges: [],
+    sortType: 'asc' // 'asc' for ascending, 'desc' for descending
 }
 
 export const filtersSlice = createSlice({
@@ -78,6 +79,14 @@ export const filtersSlice = createSlice({
             state.selectedBrands = []
             state.selectedCategories = []
             state.selectedPriceRanges = []
+        },
+
+        // Sort actions
+        toggleSortType: (state) => {
+            state.sortType = state.sortType === 'asc' ? 'desc' : 'asc'
+        },
+        setSortType: (state, action) => {
+            state.sortType = action.payload
         }
     }
 })
@@ -95,7 +104,9 @@ export const {
     removePriceRangeFilter,
     togglePriceRangeFilter,
     clearPriceRangeFilters,
-    clearAllFilters
+    clearAllFilters,
+    toggleSortType,
+    setSortType
 } = filtersSlice.actions
 
 export default filtersSlice.reducer
