@@ -4,11 +4,23 @@ import MainLayout from '../layouts/main'
 import Technology from '../pages/technology'
 import Clothing from '../pages/clothing'
 import Cosmetic from '../pages/cosmetic'
+import Login from '../pages/auth/login'
+import Register from '../pages/auth/register'
+import ProtectedRoute from "../components/ProtectedRoute";
+
 
 const routes = createBrowserRouter([
     {
+        path: "/login",
+        element: <Login />
+    },
+    {
+        path: "/register",
+        element: <Register />
+    },
+    {
         path: "/",
-        element: <MainLayout />,
+        element: (<ProtectedRoute><MainLayout /></ProtectedRoute>),
         children: [
             {
                 index: true,
@@ -28,6 +40,7 @@ const routes = createBrowserRouter([
             }
         ]
     },
+
 
 ])
 

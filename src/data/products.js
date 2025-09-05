@@ -64,5 +64,27 @@ export const Products = [
         type: "cosmetic",
         category: "parfüm",
         brand: "zara"
+    },
+    {
+        id: 7,
+        image: "https://static.zara.net/assets/public/b698/9e21/177648c18c5d/b005111c22df/08619461800-p/08619461800-p.jpg?ts=1756394488740&w=1024",
+        title: "Kıvrık Belli Pantolon",
+        description: "Yünlü iplikten üretilmiş, orta bel, kıvrık belli, yan cepli ve önü pens detaylı pantolon.",
+        price: "3690",
+        sale: "",
+        type: "clothing",
+        category: "pantolon",
+        brand: "zara"
+    },
+    {
+        id: 8,
+        image: "https://static.zara.net/assets/public/ec38/870d/00574bb7b763/8a29f1150abd/08830534725-p/08830534725-p.jpg?ts=1756139049251&w=1024",
+        title: "Dokulu Straight Fit Pantolon",
+        description: "Önü fermuarlı, içten düğmeli ve metal kopçalı, yan cepli ve arkası biyeli yalancı cepli yüksek bel pantolon.",
+        price: "1790",
+        sale: "",
+        type: "clothing",
+        category: "pantolon",
+        brand: "zara"
     }
 ]

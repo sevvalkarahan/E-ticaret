@@ -3,6 +3,7 @@ import Filter from "./sidebar/left";
 import Profile from "./sidebar/right";
 import Header from "../../components/header";
 
+
 export default function MainLayout() {
     return (
         <div className="w-full h-screen flex flex-col">

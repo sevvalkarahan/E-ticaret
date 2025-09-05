@@ -1,9 +1,12 @@
 import Logo from "../../../public/logo.png"
 import { Link } from "react-router-dom"
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { setActiveCategory } from "../../store/category";
+import { FaUser } from "react-icons/fa";
 
 export default function Header() {
+
+    const user = useSelector((state) => state.auth.currentUser);
 
     const dispatch = useDispatch();
 
@@ -24,6 +27,17 @@ export default function Header() {
                 <Link onClick={() => handleCategoryClick('clothing')} className="hover:text-lg transition-all" to={'/clothing'}>Giyim</Link>
                 <Link onClick={() => handleCategoryClick('cosmetic')} className="hover:text-lg transition-all" to={'/cosmetic'}>Kozmetik</Link>
             </nav>
+
+            {
+                user ? (
+                    <div className="flex mx-5 items-center cursor-pointer hover:scale-110 transition-transform" >
+                        <FaUser className="text-light-yellow text-xl p-0 m-0" />
+                        <span className="text-light-yellow text-lg ml-2">{user?.name}</span>
+                    </div>
+                ) : null
+            }
+
+
         </div>
     )
 }

@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-    --color-blue-violet: #a7a7e4;
+    /* --color-blue-violet: #a7a7e4; */
+    --color-blue-violet: #c9c9f2;
     --color-light-yellow: #fbfee7;
 }
