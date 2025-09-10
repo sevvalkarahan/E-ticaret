@@ -344,7 +344,7 @@ export default function Filter() {
         }
     };
     return (
-        <div className="w-1/6 border border-transparent border-r-blue-violet px-4 py-3 ">
+        <div className="w-full  px-4 py-3 ">
             <div className="flex gap-4 text-blue-violet font-bold">
                 <FaFilter className="text-2xl" />
                 <p className="text-xl">Filtrele</p>

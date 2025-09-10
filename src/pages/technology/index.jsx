@@ -10,7 +10,7 @@ export default function Technology() {
     const finalFilteredProducts = sortProductsByPrice(filteredProducts, sortType)
 
     return (
-        <div className="grid grid-cols-3 gap-10 py-5">
+        <div className="grid grid-cols-3 gap-10 py-5 ">
             {finalFilteredProducts.map(item => (
                 <Product key={item.id} item={item} />
             ))}
