@@ -3,7 +3,7 @@ import { Products } from '../../data/products'
 
 const initialState = {
     filteredProduct: Products,
-
+    selectedProduct: {},
 }
 
 export const productSlice = createSlice({
@@ -12,10 +12,13 @@ export const productSlice = createSlice({
     reducers: {
         _filtered: (state, action) => {
             state.filteredProduct = Products.filter(product => product.type === action.payload)
-        }
+        },
+        _selectedProduct: (state, action) => {
+            state.selectedProduct = action.payload
+        },
     },
 })
 
-export const { _filtered } = productSlice.actions
+export const { _filtered, _selectedProduct } = productSlice.actions
 
 export default productSlice.reducer

@@ -7,6 +7,7 @@ import Cosmetic from '../pages/cosmetic'
 import Login from '../pages/auth/login'
 import Register from '../pages/auth/register'
 import ProtectedRoute from "../components/ProtectedRoute";
+import { ProductDetails } from '../pages/product-details'
 
 
 const routes = createBrowserRouter([
@@ -40,6 +41,10 @@ const routes = createBrowserRouter([
             }
         ]
     },
+    {
+        path: "/product-details/:id",
+        element: <ProductDetails />
+    }
 
 
 ])

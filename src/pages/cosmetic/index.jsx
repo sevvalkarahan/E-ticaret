@@ -10,10 +10,12 @@ export default function Cosmetic() {
     const finalFilteredProducts = sortProductsByPrice(filteredProducts, sortType)
 
     return (
-        <div className="grid grid-cols-3 gap-10 py-5">
-            {finalFilteredProducts.map(item => (
-                <Product key={item.id} item={item} />
-            ))}
+        <div className=" w-full flex justify-center items-center py-5">
+            <div className="w-[80%] flex flex-wrap gap-x-5 gap-y-10">
+                {finalFilteredProducts.map(item => (
+                    <Product key={item.id} item={item} />
+                ))}
+            </div>
         </div>
     )
 }

@@ -6,6 +6,7 @@ import { FaStore } from "react-icons/fa";
 import { _filtered } from "../../../../store/product";
 import { useDispatch, useSelector } from 'react-redux';
 import { useFilters } from '../../../../store/hooks/useFilters';
+import Button from "../../../../components/button";
 
 
 
@@ -364,20 +365,18 @@ export default function Filter() {
             )}
             <div className="px-2 py-4 flex flex-col gap-y-4">
                 <h1 className="font-bold text-xl flex items-center p-0 gap-2"><LuArrowUpDown className="text-blue-violet" />Sırala</h1>
-                <button
+                <Button
                     onClick={() => setSort('asc')}
-                    className={`px-3 text-gray-700 w-[130px] h-[30px] cursor-pointer border rounded transition-colors ${sortType === 'asc' ? 'bg-blue-violet text-white' : 'hover:bg-gray-100'
-                        }`}
+                    variant="accent"
                 >
                     Artan fiyat
-                </button>
-                <button
+                </Button>
+                <Button
                     onClick={() => setSort('desc')}
-                    className={`px-3 text-gray-700 w-[130px] h-[30px] cursor-pointer border rounded transition-colors ${sortType === 'desc' ? 'bg-blue-violet text-white' : 'hover:bg-gray-100'
-                        }`}
+                    variant="accent"
                 >
                     Azalan fiyat
-                </button>
+                </Button>
             </div>
         </div>
     )
