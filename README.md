@@ -37,9 +37,6 @@ Kullanıcılar ürünleri inceleyebilir, filtreleme ve sıralama yapabilir, sepe
 - **Tailwind CSS** – Hızlı ve modern stil
 - **React Icons** – İkon kütüphanesi
 
-## 📷 Ekran Görüntüleri
-
-> Buraya uygulamadan ekran görüntüleri ekleyebilirsiniz. (ör. anasayfa, ürün detay, sepet)
 
 ## ⚙️ Kurulum
 
